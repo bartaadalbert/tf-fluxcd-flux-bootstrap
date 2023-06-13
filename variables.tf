@@ -25,3 +25,8 @@ variable "config_path" {
   default     = "~/.kube/config"
   description = "The path to the kubeconfig file"
 }
+
+variable "dummy_input" {
+  description = "An input to force module to wait for kind-config"
+  default = ""
+}
