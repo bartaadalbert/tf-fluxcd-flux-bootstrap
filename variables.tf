@@ -3,6 +3,12 @@ variable "github_repository" {
   description = "GitHub repository to store Flux manifests"
 }
 
+variable "flux_namespace" {
+  type        = string
+  default     = "flux-system"
+  description = "GitHub repository to store Flux manifests"
+}
+
 variable "target_path" {
   type        = string
   default     = "clusters"
@@ -24,6 +30,31 @@ variable "config_path" {
   type        = string
   default     = "~/.kube/config"
   description = "The path to the kubeconfig file"
+}
+
+variable "config_host" {
+  type        = string
+  default     = "gke"
+  description = "The url for kind"
+}
+
+variable "config_client_key" {
+  type        = string
+  default     = "client_key"
+  description = "The token for kind"
+}
+
+variable "config_crt" {
+  type        = string
+  default     = "ca"
+  description = "The ca for kind"
+}
+
+
+variable "config_ca" {
+  type        = string
+  default     = "ca"
+  description = "The ca for kind"
 }
 
 variable "dummy_input" {
